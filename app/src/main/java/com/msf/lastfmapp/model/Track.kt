@@ -8,4 +8,6 @@ data class Track(
     val name: String,
     val streamable: String,
     val url: String
-)
+) {
+    fun albumPhoto(): String = image.first { it.size == "extralarge" }.text
+}
