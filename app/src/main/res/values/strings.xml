@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LastFmApp</string>
+    <string name="search_hint">Search</string>
+    <string name="search_placeholder">Type the name of song</string>
+</resources>

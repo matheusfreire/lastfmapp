@@ -1,0 +1,41 @@
+dependencies {
+    /**
+     * External dependencies
+     */
+    implementation AndroidLibs.koin_androidx_scope
+    implementation AndroidLibs.koin_androidx_viewmodel
+    implementation AndroidLibs.koltin_std
+    implementation AndroidLibs.androidx_core
+    implementation AndroidLibs.androidx_appcompat
+    implementation AndroidLibs.material
+    implementation AndroidLibs.constraintlayout
+    implementation AndroidLibs.glide
+    implementation AndroidLibs.retrofit
+    implementation AndroidLibs.retrofit_converter_gson
+    implementation AndroidLibs.coroutines_android
+    implementation AndroidLibs.coroutines_core
+    implementation TestLibs.espresso_idling_resource
+
+    /**
+     * Unit test dependencies
+     */
+    testImplementation TestLibs.junit
+    testImplementation TestLibs.mockk
+    testImplementation TestLibs.kotlin_test
+    testImplementation TestLibs.koin_test
+    testImplementation TestLibs.test_core
+    testImplementation TestLibs.core_testing
+    testImplementation(TestLibs.robolectric) {
+        exclude group: 'com.google.auto.service', module: 'auto-service'
+    }
+
+    /**
+     * Instrumented tests dependencies
+     */
+    androidTestImplementation TestLibs.androidx_junit
+    androidTestImplementation TestLibs.espresso_core
+    androidTestImplementation TestLibs.test_core
+    androidTestImplementation TestLibs.test_rules
+    androidTestImplementation TestLibs.test_runner
+    androidTestImplementation TestLibs.mockk_android
+}
