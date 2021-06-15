@@ -1,8 +1,8 @@
 package com.msf.lastfmapp.repository
 
 import com.msf.lastfmapp.model.MusicResult
-import com.msf.lastfmapp.network.Service
+import com.msf.lastfmapp.network.ResultWrapper
 
 interface LastFmRepository {
-    suspend fun fetchMusics(query: String) : MusicResult
+    suspend fun fetchMusics(query: String) : ResultWrapper<MusicResult>
 }
