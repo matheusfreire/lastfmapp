@@ -45,4 +45,11 @@ android {
         viewBinding true
         dataBinding true
     }
+
+    testOptions {
+        unitTests{
+            returnDefaultValues = true
+            includeAndroidResources = true
+        }
+    }
 }

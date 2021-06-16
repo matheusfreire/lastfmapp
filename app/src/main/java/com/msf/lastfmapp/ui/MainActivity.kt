@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.annotation.DrawableRes
+import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.observe
@@ -16,7 +17,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    lateinit var binding: ActivityMainBinding
 
     private val lastFmViewModel: LastFmViewModel by viewModel()
 

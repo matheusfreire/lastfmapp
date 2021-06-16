@@ -29,12 +29,9 @@ class LastFmViewModel(private val lastFmRepository: LastFmRepository) : ViewMode
     fun fetchTracks(query: String){
         searchJob?.cancel()
         searchJob = viewModelScope.launch {
-            debounceJob()
             _mutableLoading.postValue(true)
             when(val result = lastFmRepository.fetchMusics(query)) {
-                is Success -> {
-                    handleSuccess(result)
-                }
+                is Success -> handleSuccess(result)
                 is GenericError -> _mutableError.postValue(result.error)
                 else -> _mutableError.postValue(Error(999, "Something went wrong"))
             }
@@ -50,7 +47,4 @@ class LastFmViewModel(private val lastFmRepository: LastFmRepository) : ViewMode
             _mutableError.postValue(Error(1, "No musics founded with your criteria"))
         }
     }
-
-    private suspend fun debounceJob() = delay(300)
-
 }

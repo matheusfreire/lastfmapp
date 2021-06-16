@@ -55,9 +55,7 @@ ext {
             orchestrator_version   : '1.3.0',
             http_client_version    : "4.3.5.1",
             core_testing_version   : "2.1.0",
-            mockito_version        : "3.8.0",
-            mockito_kotlin_version : "2.2.0",
-            mockwebserver_version  : "2.7.5",
+            fragment_ktx_version   : "1.3.4",
     ]
 
     TestLibs = [
@@ -70,7 +68,6 @@ ext {
             mockk_android           : "io.mockk:mockk-android:$TestLibsVersions.mockk_version",
             kotlin_test             : "io.kotlintest:kotlintest-runner-junit5:$TestLibsVersions.kotlin_test_version",
             test_core               : "androidx.test:core-ktx:$TestLibsVersions.test_core_version",
-            navigation_testing      : "androidx.navigation:navigation-testing:$Versions.navigation_component_version",
             test_rules              : "androidx.test:rules:$TestLibsVersions.test_rules_version",
             test_runner             : "androidx.test:runner:$TestLibsVersions.test_runner_version",
             coroutines_test         : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$TestLibsVersions.coroutines_test_version",
@@ -79,10 +76,7 @@ ext {
             espresso_intents        : "androidx.test.espresso:espresso-intents:$TestLibsVersions.espresso_core_version",
             http_client             : "org.apache.httpcomponents:httpclient-android:$TestLibsVersions.http_client_version",
             core_testing            : "androidx.arch.core:core-testing:$TestLibsVersions.core_testing_version",
-            mockito_core            : "org.mockito:mockito-core:$TestLibsVersions.mockito_version",
-            mockito_inline          : "org.mockito:mockito-inline:$TestLibsVersions.mockito_version",
-            mockito_android         : "org.mockito:mockito-android:$TestLibsVersions.mockito_version",
-            mockito_kotlin          : "com.nhaarman.mockitokotlin2:mockito-kotlin:$TestLibsVersions.mockito_kotlin_version",
+            fragment_testing        : "androidx.fragment:fragment-testing:$TestLibsVersions.fragment_ktx_version",
     ]
 
 }
